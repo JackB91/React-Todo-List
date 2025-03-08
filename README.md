@@ -1,2 +1,1 @@
-# React-Todo-List
-A simple react todo list
+My First React project: A simple todo list
