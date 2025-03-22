@@ -17,3 +17,6 @@ h1 {
 
 h2 {color: #535bf2;}
 
+.completed {
+  text-decoration: line-through;
+}

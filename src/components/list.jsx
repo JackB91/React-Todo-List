@@ -7,6 +7,8 @@ export default function List() {
         ['run','bike', 'swim']
     ) 
 
+    const [checkedItems, setCheckedItems] = React.useState({})
+
     function addTodo (formData) {
         const newTodo = formData.get("todo")
         setList (prevList => [...prevList, newTodo])
@@ -15,15 +17,25 @@ export default function List() {
 
     
     function handleDelete (itemToDelete) {
-        console.log(itemToDelete)
         setList (prevList => prevList.filter(item => item !== itemToDelete))
+    }
+
+    function handleToggle (item) {
+        setCheckedItems (prev => ({
+            ...prev,
+            [item]: !prev[item]
+        }))
     }
 
 
 
     const listItems = list.map (item => (
-      <li key={item}>{item}
-         <input type="checkbox" />
+      <li key={item} className={checkedItems[item] ? "completed" : ''} >{item}
+         <input 
+         type="checkbox"
+         checked = {checkedItems[item] || false}
+         onChange={() => handleToggle(item)} 
+         />
          <button onClick={() => handleDelete(item)}>❌</button>
          </li>   
     ))
