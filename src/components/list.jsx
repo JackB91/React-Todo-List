@@ -11,7 +11,14 @@ export default function List() {
 
     function addTodo (formData) {
         const newTodo = formData.get("todo")
-        setList (prevList => [...prevList, newTodo])
+
+
+        if (!list.includes(newTodo)) {
+            setList(prevList => [...prevList, newTodo]);
+        } else {
+            alert("That item already exists.");
+        }
+         
     }
 
 
