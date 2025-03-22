@@ -36,7 +36,7 @@ export default function List() {
          checked = {checkedItems[item] || false}
          onChange={() => handleToggle(item)} 
          />
-         <button onClick={() => handleDelete(item)}>❌</button>
+         <button className="delete" onClick={() => handleDelete(item)}>❌</button>
          </li>   
     ))
 
@@ -52,7 +52,9 @@ return (
               name="todo"/>
 
               <button>Add ToDo</button>
+              
         </form>
+        <hr />
 
         {list.length > 0 ? <section>
             <h2>ToDo Items</h2>

@@ -1,3 +1,9 @@
+html {  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+margin: 1rem;
+font-family: sans-serif;
+}
+
+
 header {
   display: flex;
   justify-content: center;
@@ -5,7 +11,6 @@ header {
   gap: 11px;
   height: 80px;
   background-color: white;
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
 }
 
 
@@ -13,10 +18,37 @@ header {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: darkgreen;
+  
 }
 
-h2 {color: #535bf2;}
+h2 {color: #535bf2;
+text-align: center;}
 
 .completed {
   text-decoration: line-through;
+}
+
+.delete {
+  border: none;
+  background-color: white;
+}
+
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  padding: 2rem;
+  
+}
+
+li {
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover ,input{
+  cursor: pointer;
 }
